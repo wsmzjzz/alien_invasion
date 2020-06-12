@@ -1,3 +1,4 @@
+"""Main entry of the alien invasion game"""
 import pygame
 from settings import Settings
 from ship import Ship
@@ -18,7 +19,11 @@ def run_game():
     ship = Ship(screen)
 
     while True:
-        gf.check_events()
+        # mouse & keyboard events
+        gf.check_events(ship)
+        # update status (position, ...)
+        ship.update(ai_settings)
+        # re-draw all elements
         gf.update_screen(ai_settings, screen, ship)
 
 
