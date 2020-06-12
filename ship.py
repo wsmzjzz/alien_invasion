@@ -9,7 +9,7 @@ class Ship:
         self.screen = screen
         # load the image
         self.image = pygame.image.load('images/ship.bmp')
-        # rect outside the ship
+        # get the rect outside the ship
         self.rect = self.image.get_rect()
         self.screen_rect = screen.get_rect()
         # make it at center bottom
